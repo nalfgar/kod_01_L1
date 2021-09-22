@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 import pytest
 
-from angles import deg2grad, grad2deg
-from angles import grad2rad, rad2grad
-from angles import decimal_deg2rad, rad2decimal_deg
-from angles import decimal_deg2dms_deg
+from geolib.angles import deg2grad, grad2deg
+from geolib.angles import grad2rad, rad2grad
+from geolib.angles import decimal_deg2rad, rad2decimal_deg
+from geolib.angles import decimal_deg2dms_deg
 
 
 def test_deg2grad():

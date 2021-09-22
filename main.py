@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
-from point import Point
-from point import normalize_angle
+from geolib.point import Point
 
 
 def main():
@@ -16,7 +15,7 @@ def main():
     azimuth = 0
     for i in range(len(points)-1):
         azimuth += points[i].get_azimuth(points[i+1])
-        length += points[i].get_length(points[i+1])
+        length += points[i].get_distance(points[i + 1])
 
     print(f'length = {length}')
     print(f'azimuth = {azimuth}')

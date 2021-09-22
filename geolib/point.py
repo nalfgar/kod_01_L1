@@ -30,7 +30,7 @@ class Point(object):
     def __str__(self):
         return f'Point(nr="{self.name}", x={self.x}, y={self.y}, z={self.z})'
 
-    def get_length(self, other, _3d=False):
+    def get_distance(self, other, _3d=False):
         if not _3d:
             # długość 2d
             return ((other.x - self.x) ** 2 + (other.y - self.y) ** 2) ** 0.5

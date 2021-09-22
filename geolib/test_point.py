@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from point import Point, normalize_angle
+from geolib.point import Point, normalize_angle
 
 
 def test_should_check_constructor_without_z():
@@ -55,13 +55,13 @@ def test_should_check_get_length():
 
     # when
     # then
-    assert begin_point.get_length(begin_point) == 0
-    assert begin_point.get_length(end_point) == 5
-    assert end_point.get_length(begin_point) == 5
+    assert begin_point.get_distance(begin_point) == 0
+    assert begin_point.get_distance(end_point) == 5
+    assert end_point.get_distance(begin_point) == 5
 
-    assert begin_point.get_length(begin_point, _3d=True) == 0
-    assert begin_point.get_length(end_point_3d, _3d=True) == (9 + 16 + 1) ** 0.5
-    assert end_point_3d.get_length(begin_point, _3d=True) == (9 + 16 + 1) ** 0.5
+    assert begin_point.get_distance(begin_point, _3d=True) == 0
+    assert begin_point.get_distance(end_point_3d, _3d=True) == (9 + 16 + 1) ** 0.5
+    assert end_point_3d.get_distance(begin_point, _3d=True) == (9 + 16 + 1) ** 0.5
 
 
 def test_should_check_get_azimuth():
